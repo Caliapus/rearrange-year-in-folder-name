@@ -16,7 +16,7 @@ def main():
 				continue # skip if the directory is already named something like <Author> - <year> - <Album>. Already what I want. 
 			new_filename=rreplace(filename,year,"",1) #delete the last occurence of year in the foldername
 			new_filename=new_filename.replace(" - "," - "+year+" - ",1)
-#			os.rename(filename, new_filename)
+			os.rename(filename, new_filename)
 			print(filename+"   ----->    "+new_filename+"    DONE")
 
 def rreplace(s, old, new, count):
